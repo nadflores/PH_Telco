@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+bower_components/
+coverage/
+.sass-cache/
+.idea/
+.tmp/
+dist/
+dist.*
+
+# VIM FILES
+*.un~
+*.swp
+*.swo
+*.swn
