@@ -9,6 +9,7 @@
   function TelcoController($log, TelcoService) {
     var vm = this;
     
+    vm.emptyResult = emptyResult;
     vm.klass = klass;
     vm.prefixName = null;
     vm.search = search;
@@ -22,6 +23,10 @@
         default:
           return "text-success";
       }
+    }
+
+    function emptyResult(){
+      vm.prefixName = null;
     }
 
     function search(prefix){

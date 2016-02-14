@@ -1,9 +1,19 @@
-<h2 ng-class="vm.klass(vm.prefixName)">{{vm.prefixName}}</h2>
-<form name="searchForm" ng-submit="vm.search(prefix)">
-  <div class="form-group">
-    <input type="text" name="telcoPrefix" class="form-control input-lg" ng-model="prefix" placeholder="Enter 0998 or 917">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 col-sm-offset-3 col-sm-6" id="main">
+    <h4>PH Telecom Search</h4>
+    <hr>
+    <h2 ng-class="vm.klass(vm.prefixName)">{{vm.prefixName}}</h2>
+    <form name="searchForm" ng-submit="vm.search(prefix)">
+      <div class="form-group">
+        <input type="text" name="telcoPrefix" class="form-control input-lg" placeholder="Enter 0998 or 917"
+        ng-model="prefix" 
+        ng-change="vm.emptyResult()"
+        >
+      </div>
+      <div class="login-buttons">
+        <button type="submit" class="btn btn-info btn-block btn-lg">Search</button>
+      </div>
+    </form>
+    <p class="disclaimer">Disclaimer: Search results are subject to change and is based from <a href="http://networkprefix.blogspot.com/2015/05/May2015.html" target="_blank">this info</a>.</p>
   </div>
-  <div class="login-buttons">
-    <button type="submit" class="btn btn-info btn-block btn-lg">Search</button>
-  </div>
-</form>
+</div>
