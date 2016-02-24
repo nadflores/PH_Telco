@@ -5,7 +5,7 @@
     <h2 ng-class="vm.klass(vm.prefixName)">{{vm.prefixName}}</h2>
     <form name="searchForm" ng-submit="vm.search(prefix)">
       <div class="form-group">
-        <input type="text" name="telcoPrefix" class="form-control input-lg" placeholder="Enter 0998 or 917"
+        <input type="text" name="telcoPrefix" class="form-control input-lg" placeholder="Enter 0998 or 917" autofocus
         ng-model="prefix" 
         ng-change="vm.emptyResult()"
         >
